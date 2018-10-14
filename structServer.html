@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>otus_homework_12: Структура Server</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">otus_homework_12
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="inherits.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="structServer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Структура Server</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс сервера.  
+ <a href="structServer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="server_8h_source.html">server.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a30979cfa5b4e5f3e37881df337e7b63d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structServer.html#a30979cfa5b4e5f3e37881df337e7b63d">client_t</a> = std::shared_ptr&lt; <a class="el" href="structClient.html">Client</a> &gt;</td></tr>
+<tr class="separator:a30979cfa5b4e5f3e37881df337e7b63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aaf5176747aba430a307fd4ca82dd8c01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structServer.html#aaf5176747aba430a307fd4ca82dd8c01">Server</a> (const <a class="el" href="structServer.html">Server</a> &amp;)=delete</td></tr>
+<tr class="separator:aaf5176747aba430a307fd4ca82dd8c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a3806d56e33c490edd381f2bbde812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structServer.html#a94a3806d56e33c490edd381f2bbde812">operator=</a> (const <a class="el" href="structServer.html">Server</a> &amp;)=delete</td></tr>
+<tr class="separator:a94a3806d56e33c490edd381f2bbde812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86aa0e0fb057c08e412ee8262a41f7c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structServer.html#a86aa0e0fb057c08e412ee8262a41f7c3">Server</a> (uint16_t port, size_t block_size)</td></tr>
+<tr class="separator:a86aa0e0fb057c08e412ee8262a41f7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb27d30b40a94326e3fd629d3b30b7d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structServer.html#abb27d30b40a94326e3fd629d3b30b7d5">run</a> ()</td></tr>
+<tr class="memdesc:abb27d30b40a94326e3fd629d3b30b7d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает сервер.  <a href="#abb27d30b40a94326e3fd629d3b30b7d5">Подробнее...</a><br/></td></tr>
+<tr class="separator:abb27d30b40a94326e3fd629d3b30b7d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f559ed476e926361458dae8f9f53245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structServer.html#a1f559ed476e926361458dae8f9f53245">remove_client</a> (const <a class="el" href="structServer.html#a30979cfa5b4e5f3e37881df337e7b63d">client_t</a> &amp;client)</td></tr>
+<tr class="separator:a1f559ed476e926361458dae8f9f53245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс сервера. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a class="anchor" id="a30979cfa5b4e5f3e37881df337e7b63d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structServer.html#a30979cfa5b4e5f3e37881df337e7b63d">Server::client_t</a> =  std::shared_ptr&lt;<a class="el" href="structClient.html">Client</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a class="anchor" id="aaf5176747aba430a307fd4ca82dd8c01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Server::Server </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structServer.html">Server</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a86aa0e0fb057c08e412ee8262a41f7c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Server::Server </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>block_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Конструктор. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Номер порта, по которому будут приниматься данные. </td></tr>
+    <tr><td class="paramname">block_size</td><td>Размер блока команд. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a class="anchor" id="a94a3806d56e33c490edd381f2bbde812"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structServer.html">Server</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1f559ed476e926361458dae8f9f53245"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::remove_client </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structServer.html#a30979cfa5b4e5f3e37881df337e7b63d">client_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>client</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Удаляет клиента. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>Адрес клиента. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abb27d30b40a94326e3fd629d3b30b7d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запускает сервер. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
+<li>src/server/<a class="el" href="server_8h_source.html">server.h</a></li>
+<li>src/server/<a class="el" href="server_8cpp.html">server.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
