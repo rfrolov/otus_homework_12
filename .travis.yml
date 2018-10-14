@@ -9,6 +9,7 @@ addons:
       - g++-7
       - doxygen
       - graphviz
+      - libboost-all-dev
 script:
   - export CC=gcc-7
   - export CXX=g++-7
