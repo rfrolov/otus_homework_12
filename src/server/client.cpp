@@ -4,13 +4,13 @@
 
 ba::ip::tcp::socket &Client::socket() { return m_socket; }
 
-Client::Client(Server &server, ba::io_service &service, void *handle) : m_server{server}, m_socket{service},
-                                                                        m_started{false},
-                                                                        m_handle{handle} {
-
+Client::Client(Server &server, ba::io_service &service) : m_server{server}
+                                                          , m_socket{service}
+                                                          , m_started{false} {
 }
 
-void Client::start(size_t block_size) {
+void Client::start() {
+    m_handle = CmdProcessor::getInstance().create();
     m_started = true;
     m_socket.async_read_some(ba::buffer(m_read_buffer), [this](const boost::system::error_code &err, size_t bytes) {
         on_read(err, bytes);
@@ -19,6 +19,7 @@ void Client::start(size_t block_size) {
 
 void Client::stop() {
     if (!m_started) return;
+    CmdProcessor::getInstance().destroy(m_handle);
     m_started = false;
     m_socket.close();
     m_server.remove_client(shared_from_this());

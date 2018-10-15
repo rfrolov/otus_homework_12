@@ -2,8 +2,12 @@
 #include <cassert>
 #include "print.h"
 
-CommandHandler::CommandHandler(const std::size_t block_size) : m_block_size{block_size} {
+CommandHandler::CommandHandler(std::size_t block_size) : m_block_size{block_size} {
     assert(block_size != 0);
+}
+
+void CommandHandler::set_block_size(size_t block_size) {
+    m_block_size = block_size;
 }
 
 size_t CommandHandler::add_printer(const fn_printer_t &printer) {
@@ -38,9 +42,11 @@ void CommandHandler::add_command(const std::string &command) {
     }
 }
 
-CommandHandler::Statistic &CommandHandler::finish() {
+CommandHandler::Statistic CommandHandler::finish() {
     print_pool();
-    return m_statistic;
+    Statistic result = m_statistic;
+    m_statistic = Statistic{};
+    return result;
 }
 
 CommandHandler::~CommandHandler() {

@@ -20,13 +20,14 @@ public:
 
     CmdProcessor &operator=(const CmdProcessor &&) = delete;
 
+    void set_block_size(std::size_t block_size);
 
     /**
      * Создает командный обработчик.
      * @param bulk Размер печатаемого блока.
      * @return Указатель на контекст обработчика.
      */
-    void *create(std::size_t bulk);
+    void *create();
 
     /**
      * Обрабатывает данные конкретного обработчика.
@@ -43,10 +44,9 @@ public:
 
 private:
     struct Context {
-        CommandHandler command_handler;
-        std::string    remaining_data;
-        std::size_t    print_log_id;
-        std::size_t    print_file_id;
+        std::string remaining_data;
+        std::size_t print_log_id;
+        std::size_t print_file_id;
     };
 
     CmdProcessor() = default;
@@ -56,4 +56,5 @@ private:
     std::mutex             m_mutex{};
     ThreadPool             m_thread_pool{std::thread::hardware_concurrency() ? std::thread::hardware_concurrency() : 1};
     std::vector<Context *> m_handlers{};
+    CommandHandler         m_command_handler;
 };

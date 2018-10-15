@@ -13,18 +13,21 @@ std::ostream &operator<<(std::ostream &os, const ThreadPool::Statistic &statisti
     return os << "блоков: " << statistic.bulk_num << ", команд: " << statistic.command_num;
 }
 
-void *CmdProcessor::create(std::size_t bulk) {
+void CmdProcessor::set_block_size(std::size_t block_size) {
+    m_command_handler.set_block_size(block_size);
+}
+
+void *CmdProcessor::create() {
     std::unique_lock<std::mutex> lock(m_mutex);
-    m_handlers.emplace_back(new Context{CommandHandler{bulk}, std::string{}});
+    m_handlers.emplace_back(new Context{std::string{}});
 
     auto *handle = m_handlers.back();
-    auto &command_handler = handle->command_handler;
-    handle->print_log_id = command_handler.add_printer(
+    handle->print_log_id = m_command_handler.add_printer(
             [this](std::time_t, CommandHandler::command_pull_t command_pull) {
                 m_thread_pool.enqueue([command_pull] { return print_log(command_pull); });
             });
 
-    handle->print_file_id = command_handler.add_printer(
+    handle->print_file_id = m_command_handler.add_printer(
             [this](std::time_t time, CommandHandler::command_pull_t command_pull) {
                 static size_t rnd{};
                 m_thread_pool.enqueue([time, command_pull] { return print_file(time, rnd++, command_pull); });
@@ -39,7 +42,6 @@ void CmdProcessor::process(void *handle, const std::string &new_data) {
     if (it == m_handlers.cend()) { return; }
 
     auto &context = *it;
-    auto &command_handler = context->command_handler;
 
     std::string data = context->remaining_data + new_data;
     std::size_t data_size = data.length();
@@ -47,7 +49,7 @@ void CmdProcessor::process(void *handle, const std::string &new_data) {
     std::size_t last_index{};
     for (std::size_t index{0}; index < data_size; ++index) {
         if (data[index] == '\n') {
-            command_handler.add_command(std::string(&data[last_index], &data[index]));
+            m_command_handler.add_command(std::string(&data[last_index], &data[index]));
             last_index = index + 1;
         }
     }
@@ -61,11 +63,10 @@ void CmdProcessor::destroy(void *handle) {
     if (it == m_handlers.cend()) { return; }
 
     auto &context = *it;
-    auto &command_handler = context->command_handler;
 
-    auto cmd_statistic = command_handler.finish();
-    command_handler.del_printer(context->print_log_id);
-    command_handler.del_printer(context->print_file_id);
+    auto cmd_statistic = m_command_handler.finish();
+    m_command_handler.del_printer(context->print_log_id);
+    m_command_handler.del_printer(context->print_file_id);
 
 #ifndef NDEBUG
     std::cout << "handle (" << context << "): " << cmd_statistic << std::endl;

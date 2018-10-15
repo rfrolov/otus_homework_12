@@ -24,10 +24,11 @@ struct Server {
      */
     explicit Server(uint16_t port, size_t block_size);
 
-    ~Server();
-
     /// Запускает сервер.
     void run();
+
+    /// Остановить работу сервера.
+    void stop();
 
     /**
      * Удаляет клиента.
@@ -39,9 +40,7 @@ private:
     void handle_accept(const client_t &client, const boost::system::error_code &err);
 
     uint16_t              m_port;
-    size_t                m_block_size;
     ba::io_service        m_service;
     ba::ip::tcp::acceptor m_acceptor;
     std::list<client_t>   clients{};
-    void *                m_handle;
 };

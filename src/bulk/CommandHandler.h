@@ -32,7 +32,10 @@ struct CommandHandler {
      * Конструктор.
      * @param block_size Размер блока.
      */
-    explicit CommandHandler(const std::size_t block_size);
+    explicit CommandHandler(std::size_t block_size = 1);
+
+    /// Устанавливает размер блока.
+    void set_block_size(size_t block_size);
 
     /**
      * Добавляет принтер.
@@ -54,7 +57,7 @@ struct CommandHandler {
     void add_command(const std::string &command);
 
     /// Выводит оставшиеся команды и выдает статистику.
-    Statistic &finish();
+    Statistic finish();
 
     /// Деструктор.
     ~CommandHandler();
@@ -62,7 +65,6 @@ struct CommandHandler {
 private:
     void print_pool();
 
-private:
     size_t m_block_size{};
     size_t m_braces_num{};
     command_pull_t m_command_pool{};

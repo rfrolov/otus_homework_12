@@ -13,17 +13,14 @@ struct Client : std::enable_shared_from_this<Client> {
 
     void operator=(const Client &) = delete;
 
-    explicit Client(Server &server, ba::io_service &service, void *handle);
+    explicit Client(Server &server, ba::io_service &service);
 
     /// Возвращает ссылку на сокет.
     ba::ip::tcp::socket &socket();
 
 
-    /**
-     * Ничинает работу по обработке данных от клиента.
-     * @param block_size Размер блока команд.
-     */
-    void start(size_t block_size);
+    /// Ничинает работу по обработке данных от клиента.
+    void start();
 
     /// Заканчивает работу с клиентом.
     void stop();

@@ -3,7 +3,11 @@ cmake_minimum_required(VERSION 3.2)
 add_subdirectory(googletest EXCLUDE_FROM_ALL)
 
 file(GLOB_RECURSE SOURCES *.cpp *.h)
-add_executable(tests ${SOURCES} ${CMAKE_SOURCE_DIR}/src/bulk/print.cpp)
+add_executable(tests
+        ${SOURCES}
+        ${CMAKE_SOURCE_DIR}/src/bulk/print.cpp
+        ${CMAKE_SOURCE_DIR}/src/bulk/CommandHandler.cpp
+        )
 target_include_directories(tests PRIVATE ${CMAKE_SOURCE_DIR}/src)
 
 set_target_properties(
