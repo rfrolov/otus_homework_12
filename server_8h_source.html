@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
       <li><a href="annotated.html"><span>Классы</span></a></li>
       <li class="current"><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -69,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,12 +105,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structServer.html#a94a3806d56e33c490edd381f2bbde812">operator=</a>(<span class="keyword">const</span> <a class="code" href="structServer.html">Server</a> &amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structServer.html#a86aa0e0fb057c08e412ee8262a41f7c3">   25</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structServer.html#a86aa0e0fb057c08e412ee8262a41f7c3">Server</a>(uint16_t port, <span class="keywordtype">size_t</span> block_size) : m_port{port}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                                        , m_block_size{block_size}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                                        , m_acceptor{m_service, ba::ip::tcp::endpoint(ba::ip::tcp::v4(),</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                                                                                      m_port)} {};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structServer.html#aaf5176747aba430a307fd4ca82dd8c01">Server</a>(uint16_t port, <span class="keywordtype">size_t</span> block_size);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structServer.html#abb27d30b40a94326e3fd629d3b30b7d5">run</a>();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structServer.html#abb27d30b40a94326e3fd629d3b30b7d5">run</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structServer.html#a07c45a7e101a3926d8f9685c3c5d14e4">stop</a>();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structServer.html#a1f559ed476e926361458dae8f9f53245">remove_client</a>(<span class="keyword">const</span> <a class="code" href="structServer.html#a30979cfa5b4e5f3e37881df337e7b63d">client_t</a> &amp;client);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
@@ -119,18 +117,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> handle_accept(<span class="keyword">const</span> <a class="code" href="structServer.html#a30979cfa5b4e5f3e37881df337e7b63d">client_t</a> &amp;client, <span class="keyword">const</span> boost::system::error_code &amp;err);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    uint16_t              m_port;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">size_t</span>                m_block_size;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ba::io_service        m_service;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ba::ip::tcp::acceptor m_acceptor;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::list&lt;client_t&gt;   clients{};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="ttc" id="structClient_html"><div class="ttname"><a href="structClient.html">Client</a></div><div class="ttdoc">Класс ассинхронной работы с клиентом. </div><div class="ttdef"><b>Definition:</b> client.h:12</div></div>
-<div class="ttc" id="structServer_html_a1f559ed476e926361458dae8f9f53245"><div class="ttname"><a href="structServer.html#a1f559ed476e926361458dae8f9f53245">Server::remove_client</a></div><div class="ttdeci">void remove_client(const client_t &amp;client)</div><div class="ttdef"><b>Definition:</b> server.cpp:12</div></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ba::io_service        m_service;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ba::ip::tcp::acceptor m_acceptor;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::list&lt;client_t&gt;   clients{};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="ttc" id="structClient_html"><div class="ttname"><a href="structClient.html">Client</a></div><div class="ttdoc">Класс ассинхронной работы с клиентом. </div><div class="ttdef"><b>Definition:</b> client.h:11</div></div>
+<div class="ttc" id="structServer_html_a1f559ed476e926361458dae8f9f53245"><div class="ttname"><a href="structServer.html#a1f559ed476e926361458dae8f9f53245">Server::remove_client</a></div><div class="ttdeci">void remove_client(const client_t &amp;client)</div><div class="ttdef"><b>Definition:</b> server.cpp:26</div></div>
 <div class="ttc" id="structServer_html_a30979cfa5b4e5f3e37881df337e7b63d"><div class="ttname"><a href="structServer.html#a30979cfa5b4e5f3e37881df337e7b63d">Server::client_t</a></div><div class="ttdeci">std::shared_ptr&lt; Client &gt; client_t</div><div class="ttdef"><b>Definition:</b> server.h:14</div></div>
+<div class="ttc" id="structServer_html_a07c45a7e101a3926d8f9685c3c5d14e4"><div class="ttname"><a href="structServer.html#a07c45a7e101a3926d8f9685c3c5d14e4">Server::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Остановить работу сервера. </div><div class="ttdef"><b>Definition:</b> server.cpp:19</div></div>
 <div class="ttc" id="structServer_html_aaf5176747aba430a307fd4ca82dd8c01"><div class="ttname"><a href="structServer.html#aaf5176747aba430a307fd4ca82dd8c01">Server::Server</a></div><div class="ttdeci">Server(const Server &amp;)=delete</div></div>
-<div class="ttc" id="structServer_html_a86aa0e0fb057c08e412ee8262a41f7c3"><div class="ttname"><a href="structServer.html#a86aa0e0fb057c08e412ee8262a41f7c3">Server::Server</a></div><div class="ttdeci">Server(uint16_t port, size_t block_size)</div><div class="ttdef"><b>Definition:</b> server.h:25</div></div>
 <div class="ttc" id="structServer_html_a94a3806d56e33c490edd381f2bbde812"><div class="ttname"><a href="structServer.html#a94a3806d56e33c490edd381f2bbde812">Server::operator=</a></div><div class="ttdeci">void operator=(const Server &amp;)=delete</div></div>
-<div class="ttc" id="structServer_html_abb27d30b40a94326e3fd629d3b30b7d5"><div class="ttname"><a href="structServer.html#abb27d30b40a94326e3fd629d3b30b7d5">Server::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Запускает сервер. </div><div class="ttdef"><b>Definition:</b> server.cpp:4</div></div>
+<div class="ttc" id="structServer_html_abb27d30b40a94326e3fd629d3b30b7d5"><div class="ttname"><a href="structServer.html#abb27d30b40a94326e3fd629d3b30b7d5">Server::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Запускает сервер. </div><div class="ttdef"><b>Definition:</b> server.cpp:11</div></div>
 <div class="ttc" id="structServer_html"><div class="ttname"><a href="structServer.html">Server</a></div><div class="ttdoc">Класс сервера. </div><div class="ttdef"><b>Definition:</b> server.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

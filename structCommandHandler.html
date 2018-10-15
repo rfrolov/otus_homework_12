@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
       <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,17 +108,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a9aad922f198776db3a3314890b9991ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandHandler.html#a9aad922f198776db3a3314890b9991ac">CommandHandler</a> (const std::size_t block_size)</td></tr>
-<tr class="separator:a9aad922f198776db3a3314890b9991ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a6529b1986f51cecaebdb84a6799ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandHandler.html#af9a6529b1986f51cecaebdb84a6799ce">CommandHandler</a> (std::size_t block_size=1)</td></tr>
+<tr class="separator:af9a6529b1986f51cecaebdb84a6799ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f8c0c975e2dd2d5285349aedf7dc1bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandHandler.html#a4f8c0c975e2dd2d5285349aedf7dc1bd">set_block_size</a> (size_t block_size)</td></tr>
+<tr class="memdesc:a4f8c0c975e2dd2d5285349aedf7dc1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает размер блока.  <a href="#a4f8c0c975e2dd2d5285349aedf7dc1bd">Подробнее...</a><br/></td></tr>
+<tr class="separator:a4f8c0c975e2dd2d5285349aedf7dc1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9b1ffe4c75af46dc75d305bcce68ffa"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandHandler.html#ae9b1ffe4c75af46dc75d305bcce68ffa">add_printer</a> (const <a class="el" href="structCommandHandler.html#a14759e555d1c3797d99d7d3b1d4acd7f">fn_printer_t</a> &amp;printer)</td></tr>
 <tr class="separator:ae9b1ffe4c75af46dc75d305bcce68ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae352a7c44c946120a69a37af96bffeea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandHandler.html#ae352a7c44c946120a69a37af96bffeea">del_printer</a> (size_t printer_id)</td></tr>
 <tr class="separator:ae352a7c44c946120a69a37af96bffeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9632e972561a99a7273ad35b119ffc9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandHandler.html#a9632e972561a99a7273ad35b119ffc9a">add_command</a> (const std::string &amp;command)</td></tr>
 <tr class="separator:a9632e972561a99a7273ad35b119ffc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bce70aa826a781bcbc7bb8fe2903ac7"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandHandler.html#a4bce70aa826a781bcbc7bb8fe2903ac7">finish</a> ()</td></tr>
-<tr class="memdesc:a4bce70aa826a781bcbc7bb8fe2903ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит оставшиеся команды и выдает статистику.  <a href="#a4bce70aa826a781bcbc7bb8fe2903ac7">Подробнее...</a><br/></td></tr>
-<tr class="separator:a4bce70aa826a781bcbc7bb8fe2903ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989594ca9d694e4a0a7b08f0804793b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCommandHandler_1_1Statistic.html">Statistic</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandHandler.html#a989594ca9d694e4a0a7b08f0804793b5">finish</a> ()</td></tr>
+<tr class="memdesc:a989594ca9d694e4a0a7b08f0804793b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выводит оставшиеся команды и выдает статистику.  <a href="#a989594ca9d694e4a0a7b08f0804793b5">Подробнее...</a><br/></td></tr>
+<tr class="separator:a989594ca9d694e4a0a7b08f0804793b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a774109b82ae7c2556d781f457f3974c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCommandHandler.html#a774109b82ae7c2556d781f457f3974c7">~CommandHandler</a> ()</td></tr>
 <tr class="memdesc:a774109b82ae7c2556d781f457f3974c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор.  <a href="#a774109b82ae7c2556d781f457f3974c7">Подробнее...</a><br/></td></tr>
 <tr class="separator:a774109b82ae7c2556d781f457f3974c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,7 +152,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div>
 </div>
 <h2 class="groupheader">Конструктор(ы)</h2>
-<a class="anchor" id="a9aad922f198776db3a3314890b9991ac"></a>
+<a class="anchor" id="af9a6529b1986f51cecaebdb84a6799ce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -160,14 +162,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
         <tr>
           <td class="memname">CommandHandler::CommandHandler </td>
           <td>(</td>
-          <td class="paramtype">const std::size_t&#160;</td>
-          <td class="paramname"><em>block_size</em></td><td>)</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>block_size</em> = <code>1</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -184,9 +186,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <a class="anchor" id="a774109b82ae7c2556d781f457f3974c7"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">CommandHandler::~CommandHandler </td>
@@ -195,11 +194,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Деструктор. </p>
@@ -210,9 +204,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <a class="anchor" id="a9632e972561a99a7273ad35b119ffc9a"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void CommandHandler::add_command </td>
@@ -222,11 +213,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Обрабатывает команду. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
@@ -241,9 +227,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <a class="anchor" id="ae9b1ffe4c75af46dc75d305bcce68ffa"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">size_t CommandHandler::add_printer </td>
@@ -253,11 +236,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Добавляет принтер. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
@@ -273,9 +251,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <a class="anchor" id="ae352a7c44c946120a69a37af96bffeea"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void CommandHandler::del_printer </td>
@@ -285,11 +260,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Удаляет принтер </p>
 <dl class="params"><dt>Аргументы</dt><dd>
@@ -301,33 +271,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 
 </div>
 </div>
-<a class="anchor" id="a4bce70aa826a781bcbc7bb8fe2903ac7"></a>
+<a class="anchor" id="a989594ca9d694e4a0a7b08f0804793b5"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const auto&amp; CommandHandler::finish </td>
+          <td class="memname"><a class="el" href="structCommandHandler_1_1Statistic.html">CommandHandler::Statistic</a> CommandHandler::finish </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Выводит оставшиеся команды и выдает статистику. </p>
 
 </div>
 </div>
-<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<a class="anchor" id="a4f8c0c975e2dd2d5285349aedf7dc1bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CommandHandler::set_block_size </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>block_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает размер блока. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структур находятся в файлах:<ul>
 <li>src/bulk/<a class="el" href="CommandHandler_8h_source.html">CommandHandler.h</a></li>
+<li>src/bulk/<a class="el" href="CommandHandler_8cpp.html">CommandHandler.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

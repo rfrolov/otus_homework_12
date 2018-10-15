@@ -1,3 +1,5 @@
 <map id="src/bulk/CommandProcessor.h" name="src/bulk/CommandProcessor.h">
-<area shape="rect" id="node2" href="$async_8cpp.html" title="src/async/async.cpp" alt="" coords="35,80,177,107"/>
+<area shape="rect" id="node2" href="$CommandProcessor_8cpp.html" title="src/bulk/CommandProcessor.cpp" alt="" coords="5,80,221,107"/>
+<area shape="rect" id="node3" href="$client_8cpp.html" title="src/server/client.cpp" alt="" coords="246,80,385,107"/>
+<area shape="rect" id="node4" href="$server_8cpp.html" title="src/server/server.cpp" alt="" coords="410,80,555,107"/>
 </map>

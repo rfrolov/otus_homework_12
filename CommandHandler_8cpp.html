@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>otus_homework_12: src/async -&gt; bulk Связь</title>
+<title>otus_homework_12: Файл src/bulk/CommandHandler.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,9 +37,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
       <li><a href="annotated.html"><span>Классы</span></a></li>
-      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -58,12 +57,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -74,11 +79,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b60a79ed93f318a37dbc9781b4452c17.html">async</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6e22baae89fb4f62b43e7345b371b522.html">bulk</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Файл CommandHandler.cpp</div>  </div>
+</div><!--header-->
 <div class="contents">
-<h3>async &rarr; bulk Связь</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">Файл в src/async</th><th class="dirtab">Включает файл в src/bulk</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="async_8cpp.html">async.cpp</a></td><td class="dirtab"><a class="el" href="CommandProcessor_8h.html">CommandProcessor.h</a></td></tr></table></div><!-- contents -->
+<div class="textblock"><code>#include &quot;<a class="el" href="CommandHandler_8h_source.html">CommandHandler.h</a>&quot;</code><br/>
+<code>#include &lt;cassert&gt;</code><br/>
+<code>#include &quot;<a class="el" href="print_8h_source.html">print.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для CommandHandler.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="CommandHandler_8cpp__incl.png" border="0" usemap="#src_2bulk_2CommandHandler_8cpp" alt=""/></div>
+<map name="src_2bulk_2CommandHandler_8cpp" id="src_2bulk_2CommandHandler_8cpp">
+<area shape="rect" id="node2" href="CommandHandler_8h.html" title="CommandHandler.h" alt="" coords="5,80,144,107"/><area shape="rect" id="node7" href="print_8h.html" title="print.h" alt="" coords="259,80,316,107"/><area shape="rect" id="node10" href="ThreadPool_8h.html" title="ThreadPool.h" alt="" coords="384,155,483,181"/></map>
+</div>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Создано системой &#160;<a href="http://www.doxygen.org/index.html">

@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
       <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -112,6 +111,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="memitem:abb27d30b40a94326e3fd629d3b30b7d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structServer.html#abb27d30b40a94326e3fd629d3b30b7d5">run</a> ()</td></tr>
 <tr class="memdesc:abb27d30b40a94326e3fd629d3b30b7d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает сервер.  <a href="#abb27d30b40a94326e3fd629d3b30b7d5">Подробнее...</a><br/></td></tr>
 <tr class="separator:abb27d30b40a94326e3fd629d3b30b7d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c45a7e101a3926d8f9685c3c5d14e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structServer.html#a07c45a7e101a3926d8f9685c3c5d14e4">stop</a> ()</td></tr>
+<tr class="memdesc:a07c45a7e101a3926d8f9685c3c5d14e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Остановить работу сервера.  <a href="#a07c45a7e101a3926d8f9685c3c5d14e4">Подробнее...</a><br/></td></tr>
+<tr class="separator:a07c45a7e101a3926d8f9685c3c5d14e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f559ed476e926361458dae8f9f53245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structServer.html#a1f559ed476e926361458dae8f9f53245">remove_client</a> (const <a class="el" href="structServer.html#a30979cfa5b4e5f3e37881df337e7b63d">client_t</a> &amp;client)</td></tr>
 <tr class="separator:a1f559ed476e926361458dae8f9f53245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -182,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -259,6 +261,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div><div class="memdoc">
 
 <p>Запускает сервер. </p>
+
+</div>
+</div>
+<a class="anchor" id="a07c45a7e101a3926d8f9685c3c5d14e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Остановить работу сервера. </p>
 
 </div>
 </div>

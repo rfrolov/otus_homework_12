@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>otus_homework_12: Файл src/server/client.h</title>
+<title>otus_homework_12: Файл src/bulk/CommandProcessor.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,41 +79,88 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_075bb3ff235063c77951cd176d15a741.html">server</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6e22baae89fb4f62b43e7345b371b522.html">bulk</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Классы</a>  </div>
+<a href="#func-members">Функции</a>  </div>
   <div class="headertitle">
-<div class="title">Файл client.h</div>  </div>
+<div class="title">Файл CommandProcessor.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;boost/asio.hpp&quot;</code><br/>
-<code>#include &lt;functional&gt;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="CommandProcessor_8h_source.html">CommandProcessor.h</a>&quot;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;algorithm&gt;</code><br/>
+<code>#include &quot;<a class="el" href="print_8h_source.html">print.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Граф включаемых заголовочных файлов для client.h:</div>
+Граф включаемых заголовочных файлов для CommandProcessor.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="client_8h__incl.png" border="0" usemap="#src_2server_2client_8h" alt=""/></div>
-<map name="src_2server_2client_8h" id="src_2server_2client_8h">
-</map>
+<div class="center"><img src="CommandProcessor_8cpp__incl.png" border="0" usemap="#src_2bulk_2CommandProcessor_8cpp" alt=""/></div>
+<map name="src_2bulk_2CommandProcessor_8cpp" id="src_2bulk_2CommandProcessor_8cpp">
+<area shape="rect" id="node2" href="CommandProcessor_8h.html" title="CommandProcessor.h" alt="" coords="339,80,491,107"/><area shape="rect" id="node13" href="print_8h.html" title="print.h" alt="" coords="536,80,593,107"/><area shape="rect" id="node3" href="CommandHandler_8h.html" title="CommandHandler.h" alt="" coords="345,155,484,181"/><area shape="rect" id="node7" href="ThreadPool_8h.html" title="ThreadPool.h" alt="" coords="197,155,296,181"/></map>
 </div>
-</div><div class="textblock"><div class="dynheader">
-Граф файлов, в которые включается этот файл:</div>
-<div class="dyncontent">
-<div class="center"><img src="client_8h__dep__incl.png" border="0" usemap="#src_2server_2client_8hdep" alt=""/></div>
-<map name="src_2server_2client_8hdep" id="src_2server_2client_8hdep">
-<area shape="rect" id="node2" href="client_8cpp.html" title="src/server/client.cpp" alt="" coords="5,80,144,107"/><area shape="rect" id="node3" href="server_8cpp.html" title="src/server/server.cpp" alt="" coords="169,80,313,107"/></map>
-</div>
-</div>
-<p><a href="client_8h_source.html">См. исходные тексты.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Классы</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structClient.html">Client</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс ассинхронной работы с клиентом.  <a href="structClient.html#details">Подробнее...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:afcdb1fb96944c9e7efe1af1423191e7d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommandProcessor_8cpp.html#afcdb1fb96944c9e7efe1af1423191e7d">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="structCommandHandler_1_1Statistic.html">CommandHandler::Statistic</a> &amp;statistic)</td></tr>
+<tr class="separator:afcdb1fb96944c9e7efe1af1423191e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cac29c3ef16c022befe14f962559f5"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommandProcessor_8cpp.html#a16cac29c3ef16c022befe14f962559f5">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="structThreadPool_1_1Statistic.html">ThreadPool::Statistic</a> &amp;statistic)</td></tr>
+<tr class="separator:a16cac29c3ef16c022befe14f962559f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Функции</h2>
+<a class="anchor" id="afcdb1fb96944c9e7efe1af1423191e7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structCommandHandler_1_1Statistic.html">CommandHandler::Statistic</a> &amp;&#160;</td>
+          <td class="paramname"><em>statistic</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a16cac29c3ef16c022befe14f962559f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structThreadPool_1_1Statistic.html">ThreadPool::Statistic</a> &amp;&#160;</td>
+          <td class="paramname"><em>statistic</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

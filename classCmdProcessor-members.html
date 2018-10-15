@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
       <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,20 +82,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">CmdProcesser Cписок членов класса</div>  </div>
+<div class="title">CmdProcessor Cписок членов класса</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Полный список членов класса <a class="el" href="classCmdProcesser.html">CmdProcesser</a>, включая наследуемые из базового класса</p>
+<p>Полный список членов класса <a class="el" href="classCmdProcessor.html">CmdProcessor</a>, включая наследуемые из базового класса</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classCmdProcesser.html#ae5d86fcc43c9762d47ddde135edcdc84">CmdProcesser</a>(const CmdProcesser &amp;)=delete</td><td class="entry"><a class="el" href="classCmdProcesser.html">CmdProcesser</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classCmdProcesser.html#aaa08e5a08bf97537f6ec14e9ce363e46">CmdProcesser</a>(const CmdProcesser &amp;&amp;)=delete</td><td class="entry"><a class="el" href="classCmdProcesser.html">CmdProcesser</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCmdProcesser.html#a0854e1e533d9400c0a95049740d4f1e8">create</a>(std::size_t bulk)</td><td class="entry"><a class="el" href="classCmdProcesser.html">CmdProcesser</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classCmdProcesser.html#ad866ac20cc68fa5ac0eeb27f7d74758a">destroy</a>(void *handle)</td><td class="entry"><a class="el" href="classCmdProcesser.html">CmdProcesser</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCmdProcesser.html#a812bf5e193df46ed6a18bb9d982189fa">getInstance</a>()</td><td class="entry"><a class="el" href="classCmdProcesser.html">CmdProcesser</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classCmdProcesser.html#a40b89d500f291d99cb9520463966dca8">operator=</a>(const CmdProcesser &amp;)=delete</td><td class="entry"><a class="el" href="classCmdProcesser.html">CmdProcesser</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCmdProcesser.html#a01b2613eaeb5aaaa9946ba4bc2c46fc2">operator=</a>(const CmdProcesser &amp;&amp;)=delete</td><td class="entry"><a class="el" href="classCmdProcesser.html">CmdProcesser</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classCmdProcesser.html#acea43677e83aa29212847a2b5f3a6aa3">process</a>(void *handle, const std::string &amp;new_data)</td><td class="entry"><a class="el" href="classCmdProcesser.html">CmdProcesser</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCmdProcessor.html#a3d4992066113a7ae4b9d077cb2b70d47">CmdProcessor</a>(const CmdProcessor &amp;)=delete</td><td class="entry"><a class="el" href="classCmdProcessor.html">CmdProcessor</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classCmdProcessor.html#ab7b01f97794b509cd63883f7fc0fb60b">CmdProcessor</a>(const CmdProcessor &amp;&amp;)=delete</td><td class="entry"><a class="el" href="classCmdProcessor.html">CmdProcessor</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCmdProcessor.html#afe39e4de9ff94201bf7ff86204450e1b">create</a>()</td><td class="entry"><a class="el" href="classCmdProcessor.html">CmdProcessor</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classCmdProcessor.html#aa52806574e380e1e54f8e4c5dbdd57e3">destroy</a>(void *handle)</td><td class="entry"><a class="el" href="classCmdProcessor.html">CmdProcessor</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCmdProcessor.html#acf3d1b69efdde705ad903f6b65864e49">getInstance</a>()</td><td class="entry"><a class="el" href="classCmdProcessor.html">CmdProcessor</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCmdProcessor.html#ae60e7dd0da31debd8c92ac823f96e81e">operator=</a>(const CmdProcessor &amp;)=delete</td><td class="entry"><a class="el" href="classCmdProcessor.html">CmdProcessor</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCmdProcessor.html#a1ea15bb59b4962b7e22a70747d6fd937">operator=</a>(const CmdProcessor &amp;&amp;)=delete</td><td class="entry"><a class="el" href="classCmdProcessor.html">CmdProcessor</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classCmdProcessor.html#ad53aff2471247cf001908b47457e5055">process</a>(void *handle, const std::string &amp;new_data)</td><td class="entry"><a class="el" href="classCmdProcessor.html">CmdProcessor</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCmdProcessor.html#a4c42f878a14077fcd04d2a3d6cd0c782">set_block_size</a>(std::size_t block_size)</td><td class="entry"><a class="el" href="classCmdProcessor.html">CmdProcessor</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

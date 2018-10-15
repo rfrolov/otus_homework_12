@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
       <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,14 +88,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 
 <p>Полный список членов класса <a class="el" href="structCommandHandler.html">CommandHandler</a>, включая наследуемые из базового класса</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structCommandHandler.html#a9632e972561a99a7273ad35b119ffc9a">add_command</a>(const std::string &amp;command)</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structCommandHandler.html#ae9b1ffe4c75af46dc75d305bcce68ffa">add_printer</a>(const fn_printer_t &amp;printer)</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structCommandHandler.html#a9632e972561a99a7273ad35b119ffc9a">add_command</a>(const std::string &amp;command)</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structCommandHandler.html#ae9b1ffe4c75af46dc75d305bcce68ffa">add_printer</a>(const fn_printer_t &amp;printer)</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structCommandHandler.html#a304886d57c54aac4b711ba2eddde5dbf">command_pull_t</a> typedef</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structCommandHandler.html#a9aad922f198776db3a3314890b9991ac">CommandHandler</a>(const std::size_t block_size)</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structCommandHandler.html#ae352a7c44c946120a69a37af96bffeea">del_printer</a>(size_t printer_id)</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structCommandHandler.html#a4bce70aa826a781bcbc7bb8fe2903ac7">finish</a>()</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structCommandHandler.html#af9a6529b1986f51cecaebdb84a6799ce">CommandHandler</a>(std::size_t block_size=1)</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structCommandHandler.html#ae352a7c44c946120a69a37af96bffeea">del_printer</a>(size_t printer_id)</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structCommandHandler.html#a989594ca9d694e4a0a7b08f0804793b5">finish</a>()</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structCommandHandler.html#a14759e555d1c3797d99d7d3b1d4acd7f">fn_printer_t</a> typedef</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structCommandHandler.html#a774109b82ae7c2556d781f457f3974c7">~CommandHandler</a>()</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structCommandHandler.html#a4f8c0c975e2dd2d5285349aedf7dc1bd">set_block_size</a>(size_t block_size)</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structCommandHandler.html#a774109b82ae7c2556d781f457f3974c7">~CommandHandler</a>()</td><td class="entry"><a class="el" href="structCommandHandler.html">CommandHandler</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

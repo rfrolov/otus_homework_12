@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
       <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -72,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,14 +87,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="contents">
 <div class="textblock">Классы с их кратким описанием.</div><div class="directory">
 <div class="levels">[уровень детализации <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2ns.png" alt="N" width="24" height="22" /><a class="el" href="namespaceasync.html" target="_self">async</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structClient.html" target="_self">Client</a></td><td class="desc">Класс ассинхронной работы с клиентом </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classCmdProcesser.html" target="_self">CmdProcesser</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><img id="arr_3_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('3_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structCommandHandler.html" target="_self">CommandHandler</a></td><td class="desc"></td></tr>
-<tr id="row_3_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structCommandHandler_1_1Statistic.html" target="_self">Statistic</a></td><td class="desc">Структура статискики </td></tr>
-<tr id="row_4_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structServer.html" target="_self">Server</a></td><td class="desc">Класс сервера </td></tr>
-<tr id="row_5_" class="even"><td class="entry"><img id="arr_5_" src="ftv2mlastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('5_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structThreadPool.html" target="_self">ThreadPool</a></td><td class="desc">Класс пула потоков </td></tr>
-<tr id="row_5_0_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structThreadPool_1_1Statistic.html" target="_self">Statistic</a></td><td class="desc">Структура статистики </td></tr>
+<tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structClient.html" target="_self">Client</a></td><td class="desc">Класс ассинхронной работы с клиентом </td></tr>
+<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classCmdProcessor.html" target="_self">CmdProcessor</a></td><td class="desc"></td></tr>
+<tr id="row_2_" class="even"><td class="entry"><img id="arr_2_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('2_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structCommandHandler.html" target="_self">CommandHandler</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structCommandHandler_1_1Statistic.html" target="_self">Statistic</a></td><td class="desc">Структура статискики </td></tr>
+<tr id="row_3_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structServer.html" target="_self">Server</a></td><td class="desc">Класс сервера </td></tr>
+<tr id="row_4_"><td class="entry"><img id="arr_4_" src="ftv2mlastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('4_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structThreadPool.html" target="_self">ThreadPool</a></td><td class="desc">Класс пула потоков </td></tr>
+<tr id="row_4_0_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structThreadPool_1_1Statistic.html" target="_self">Statistic</a></td><td class="desc">Структура статистики </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->

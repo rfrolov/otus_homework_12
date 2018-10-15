@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
-      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
       <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
       <li><a href="files.html"><span>Файлы</span></a></li>
       <li>
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Переменные</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -120,8 +119,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="memitem:afac2d218036232bfe9423ac35330e63b"><td class="memItemLeft" align="right" valign="top">ba::ip::tcp::socket &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structClient.html#afac2d218036232bfe9423ac35330e63b">socket</a> ()</td></tr>
 <tr class="memdesc:afac2d218036232bfe9423ac35330e63b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ссылку на сокет.  <a href="#afac2d218036232bfe9423ac35330e63b">Подробнее...</a><br/></td></tr>
 <tr class="separator:afac2d218036232bfe9423ac35330e63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e880a77182806d8783d843ee547a3e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structClient.html#a8e880a77182806d8783d843ee547a3e8">start</a> (size_t block_size)</td></tr>
-<tr class="separator:a8e880a77182806d8783d843ee547a3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742373e08a80d993d2651b6fff76f5b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structClient.html#a742373e08a80d993d2651b6fff76f5b9">start</a> ()</td></tr>
+<tr class="memdesc:a742373e08a80d993d2651b6fff76f5b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ничинает работу по обработке данных от клиента.  <a href="#a742373e08a80d993d2651b6fff76f5b9">Подробнее...</a><br/></td></tr>
+<tr class="separator:a742373e08a80d993d2651b6fff76f5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e827b82efa67d7e334dcdde36d7ea87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structClient.html#a9e827b82efa67d7e334dcdde36d7ea87">stop</a> ()</td></tr>
 <tr class="memdesc:a9e827b82efa67d7e334dcdde36d7ea87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заканчивает работу с клиентом.  <a href="#a9e827b82efa67d7e334dcdde36d7ea87">Подробнее...</a><br/></td></tr>
 <tr class="separator:a9e827b82efa67d7e334dcdde36d7ea87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -229,26 +229,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 
 </div>
 </div>
-<a class="anchor" id="a8e880a77182806d8783d843ee547a3e8"></a>
+<a class="anchor" id="a742373e08a80d993d2651b6fff76f5b9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Client::start </td>
           <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>block_size</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Ничинает работу по обработке данных от клиента. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">block_size</td><td>Размер блока команд. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
