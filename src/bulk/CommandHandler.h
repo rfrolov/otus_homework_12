@@ -1,8 +1,8 @@
 #pragma once
 
-#include <cassert>
 #include <functional>
-#include "print.h"
+#include <vector>
+#include <ctime>
 
 struct CommandHandler {
     using command_pull_t = std::vector<std::string>;
@@ -32,86 +32,42 @@ struct CommandHandler {
      * Конструктор.
      * @param block_size Размер блока.
      */
-    explicit CommandHandler(const std::size_t block_size) : m_block_size{block_size} {
-        assert(block_size != 0);
-    }
+    explicit CommandHandler(const std::size_t block_size);
 
     /**
      * Добавляет принтер.
      * @param printer Ссылка на функцию печати блока.
      * @return Идентификатор добавленной функции печати блока.
      */
-    size_t add_printer(const fn_printer_t &printer) {
-        m_printers.emplace_back(printer);
-        return m_printers.size() - 1;
-    }
+    size_t add_printer(const fn_printer_t &printer);
 
     /**
      * Удаляет принтер
      * @param printer_id Идентификатор функции печати блока.
      */
-    void del_printer(size_t printer_id) {
-        if (printer_id < m_printers.size()) {
-            m_printers.erase(std::next(m_printers.begin(), printer_id));
-        }
-    }
+    void del_printer(size_t printer_id);
 
     /**
      * Обрабатывает команду.
      * @param command Команда.
      */
-    void add_command(const std::string &command) {
-        ++m_statistic.string_num;
-        if (command == "{") {
-            print_pool();
-            ++m_braces_num;
-        } else if (command == "}") {
-            if (m_braces_num) {
-                --m_braces_num;
-                print_pool();
-            }
-        } else {
-            if (m_command_pool.empty()) {
-                m_first_command_time = std::time(nullptr);
-            }
-            m_command_pool.emplace_back(command);
-            if (m_command_pool.size() == m_block_size) {
-                print_pool();
-            }
-        }
-    }
+    void add_command(const std::string &command);
 
     /// Выводит оставшиеся команды и выдает статистику.
-    const auto &finish() {
-        print_pool();
-        return m_statistic;
-    }
+    Statistic &finish();
 
     /// Деструктор.
-    ~CommandHandler() {
-        finish();
-    }
-private:
-    void print_pool() {
-        if (m_command_pool.empty() || m_braces_num) {
-            return;
-        }
-
-        for (const auto &printer:m_printers) {
-            printer(m_first_command_time, m_command_pool);
-        }
-
-        ++m_statistic.bulk_num;
-        m_statistic.command_num += m_command_pool.size();
-        m_command_pool.clear();
-    }
+    ~CommandHandler();
 
 private:
-    size_t                    m_block_size{};
-    size_t                    m_braces_num{};
-    command_pull_t            m_command_pool{};
+    void print_pool();
+
+private:
+    size_t m_block_size{};
+    size_t m_braces_num{};
+    command_pull_t m_command_pool{};
     std::vector<fn_printer_t> m_printers{};
-    std::time_t               m_first_command_time{};
-    Statistic                 m_statistic{};
+    std::time_t m_first_command_time{};
+    Statistic m_statistic{};
 };
 

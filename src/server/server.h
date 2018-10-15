@@ -22,10 +22,9 @@ struct Server {
      * @param port Номер порта, по которому будут приниматься данные.
      * @param block_size Размер блока команд.
      */
-    explicit Server(uint16_t port, size_t block_size) : m_port{port}
-                                                        , m_block_size{block_size}
-                                                        , m_acceptor{m_service, ba::ip::tcp::endpoint(ba::ip::tcp::v4(),
-                                                                                                      m_port)} {};
+    explicit Server(uint16_t port, size_t block_size);
+
+    ~Server();
 
     /// Запускает сервер.
     void run();
@@ -44,4 +43,5 @@ private:
     ba::io_service        m_service;
     ba::ip::tcp::acceptor m_acceptor;
     std::list<client_t>   clients{};
+    void *                m_handle;
 };
