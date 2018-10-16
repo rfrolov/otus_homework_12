@@ -116,31 +116,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structCommandHandler.html#af9a6529b1986f51cecaebdb84a6799ce">CommandHandler</a>(std::size_t block_size = 1);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structCommandHandler.html#a4f8c0c975e2dd2d5285349aedf7dc1bd">set_block_size</a>(<span class="keywordtype">size_t</span> block_size);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structCommandHandler.html#ae9b1ffe4c75af46dc75d305bcce68ffa">add_printer</a>(<span class="keyword">const</span> <a class="code" href="structCommandHandler.html#a14759e555d1c3797d99d7d3b1d4acd7f">fn_printer_t</a> &amp;printer);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structCommandHandler.html#ae352a7c44c946120a69a37af96bffeea">del_printer</a>(<span class="keywordtype">size_t</span> printer_id);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structCommandHandler.html#a9632e972561a99a7273ad35b119ffc9a">add_command</a>(<span class="keyword">const</span> std::string &amp;command);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    Statistic <a class="code" href="structCommandHandler.html#a989594ca9d694e4a0a7b08f0804793b5">finish</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="structCommandHandler.html#a774109b82ae7c2556d781f457f3974c7">~CommandHandler</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> print_pool();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">size_t</span> m_block_size{};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">size_t</span> m_braces_num{};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="structCommandHandler.html#a304886d57c54aac4b711ba2eddde5dbf">command_pull_t</a> m_command_pool{};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::vector&lt;fn_printer_t&gt; m_printers{};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::time_t m_first_command_time{};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Statistic m_statistic{};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="structCommandHandler.html#a663b52171d6b13738fe04f1de0f62c53">CommandHandler</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structCommandHandler.html#a663b52171d6b13738fe04f1de0f62c53">CommandHandler</a>(std::size_t block_size);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structCommandHandler.html#a4f8c0c975e2dd2d5285349aedf7dc1bd">set_block_size</a>(<span class="keywordtype">size_t</span> block_size);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structCommandHandler.html#ae9b1ffe4c75af46dc75d305bcce68ffa">add_printer</a>(<span class="keyword">const</span> <a class="code" href="structCommandHandler.html#a14759e555d1c3797d99d7d3b1d4acd7f">fn_printer_t</a> &amp;printer);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structCommandHandler.html#ae352a7c44c946120a69a37af96bffeea">del_printer</a>(<span class="keywordtype">size_t</span> printer_id);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structCommandHandler.html#a9632e972561a99a7273ad35b119ffc9a">add_command</a>(<span class="keyword">const</span> std::string &amp;command);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Statistic <a class="code" href="structCommandHandler.html#a989594ca9d694e4a0a7b08f0804793b5">finish</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="structCommandHandler.html#a774109b82ae7c2556d781f457f3974c7">~CommandHandler</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> print_pool();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">size_t</span> m_block_size{};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">size_t</span> m_braces_num{};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="structCommandHandler.html#a304886d57c54aac4b711ba2eddde5dbf">command_pull_t</a> m_command_pool{};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::vector&lt;fn_printer_t&gt; m_printers{};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::time_t m_first_command_time{};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Statistic m_statistic{};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
 <div class="ttc" id="structCommandHandler_1_1Statistic_html_a8f7f6c00077d653920da79f6a042d44b"><div class="ttname"><a href="structCommandHandler_1_1Statistic.html#a8f7f6c00077d653920da79f6a042d44b">CommandHandler::Statistic::operator+=</a></div><div class="ttdeci">Statistic &amp; operator+=(const Statistic &amp;other)</div><div class="ttdef"><b>Definition:</b> CommandHandler.h:17</div></div>
 <div class="ttc" id="structCommandHandler_html_a989594ca9d694e4a0a7b08f0804793b5"><div class="ttname"><a href="structCommandHandler.html#a989594ca9d694e4a0a7b08f0804793b5">CommandHandler::finish</a></div><div class="ttdeci">Statistic finish()</div><div class="ttdoc">Выводит оставшиеся команды и выдает статистику. </div><div class="ttdef"><b>Definition:</b> CommandHandler.cpp:45</div></div>
 <div class="ttc" id="structCommandHandler_html_ae352a7c44c946120a69a37af96bffeea"><div class="ttname"><a href="structCommandHandler.html#ae352a7c44c946120a69a37af96bffeea">CommandHandler::del_printer</a></div><div class="ttdeci">void del_printer(size_t printer_id)</div><div class="ttdef"><b>Definition:</b> CommandHandler.cpp:18</div></div>
@@ -153,10 +155,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="ttc" id="structCommandHandler_1_1Statistic_html_a99dd492ecba3091a8065a478d3c50d78"><div class="ttname"><a href="structCommandHandler_1_1Statistic.html#a99dd492ecba3091a8065a478d3c50d78">CommandHandler::Statistic::command_num</a></div><div class="ttdeci">size_t command_num</div><div class="ttdoc">Количество команд. </div><div class="ttdef"><b>Definition:</b> CommandHandler.h:15</div></div>
 <div class="ttc" id="structCommandHandler_1_1Statistic_html_abdf187984a2e1b437c2368de2b5a9f2f"><div class="ttname"><a href="structCommandHandler_1_1Statistic.html#abdf187984a2e1b437c2368de2b5a9f2f">CommandHandler::Statistic::operator==</a></div><div class="ttdeci">bool operator==(const Statistic &amp;other)</div><div class="ttdef"><b>Definition:</b> CommandHandler.h:24</div></div>
 <div class="ttc" id="structCommandHandler_html"><div class="ttname"><a href="structCommandHandler.html">CommandHandler</a></div><div class="ttdef"><b>Definition:</b> CommandHandler.h:7</div></div>
-<div class="ttc" id="structCommandHandler_html_af9a6529b1986f51cecaebdb84a6799ce"><div class="ttname"><a href="structCommandHandler.html#af9a6529b1986f51cecaebdb84a6799ce">CommandHandler::CommandHandler</a></div><div class="ttdeci">CommandHandler(std::size_t block_size=1)</div><div class="ttdef"><b>Definition:</b> CommandHandler.cpp:5</div></div>
-<div class="ttc" id="structCommandHandler_html_a4f8c0c975e2dd2d5285349aedf7dc1bd"><div class="ttname"><a href="structCommandHandler.html#a4f8c0c975e2dd2d5285349aedf7dc1bd">CommandHandler::set_block_size</a></div><div class="ttdeci">void set_block_size(size_t block_size)</div><div class="ttdoc">Устанавливает размер блока. </div><div class="ttdef"><b>Definition:</b> CommandHandler.cpp:9</div></div>
+<div class="ttc" id="structCommandHandler_html_a4f8c0c975e2dd2d5285349aedf7dc1bd"><div class="ttname"><a href="structCommandHandler.html#a4f8c0c975e2dd2d5285349aedf7dc1bd">CommandHandler::set_block_size</a></div><div class="ttdeci">void set_block_size(size_t block_size)</div><div class="ttdef"><b>Definition:</b> CommandHandler.cpp:9</div></div>
 <div class="ttc" id="structCommandHandler_1_1Statistic_html_aa4ee741a34d6a5029e6c4e7d2a0661cb"><div class="ttname"><a href="structCommandHandler_1_1Statistic.html#aa4ee741a34d6a5029e6c4e7d2a0661cb">CommandHandler::Statistic::bulk_num</a></div><div class="ttdeci">size_t bulk_num</div><div class="ttdoc">Количество блоков. </div><div class="ttdef"><b>Definition:</b> CommandHandler.h:14</div></div>
 <div class="ttc" id="structCommandHandler_html_a774109b82ae7c2556d781f457f3974c7"><div class="ttname"><a href="structCommandHandler.html#a774109b82ae7c2556d781f457f3974c7">CommandHandler::~CommandHandler</a></div><div class="ttdeci">~CommandHandler()</div><div class="ttdoc">Деструктор. </div><div class="ttdef"><b>Definition:</b> CommandHandler.cpp:52</div></div>
+<div class="ttc" id="structCommandHandler_html_a663b52171d6b13738fe04f1de0f62c53"><div class="ttname"><a href="structCommandHandler.html#a663b52171d6b13738fe04f1de0f62c53">CommandHandler::CommandHandler</a></div><div class="ttdeci">CommandHandler()=delete</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

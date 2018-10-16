@@ -95,54 +95,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classCmdProcessor.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCmdProcessor.html">CmdProcessor</a> {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classCmdProcessor.html#acf3d1b69efdde705ad903f6b65864e49">   10</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;<a class="code" href="classCmdProcessor.html#acf3d1b69efdde705ad903f6b65864e49">getInstance</a>() {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">static</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> instance{};</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">return</span> instance;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a>(<span class="keyword">const</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classCmdProcessor.html#a6d806c15dc2c85d7b4a5a9c667ddd048">    9</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classCmdProcessor.html#a6d806c15dc2c85d7b4a5a9c667ddd048">context_t</a> = <span class="keywordtype">void</span>*;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classCmdProcessor.html#acf3d1b69efdde705ad903f6b65864e49">   12</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;<a class="code" href="classCmdProcessor.html#acf3d1b69efdde705ad903f6b65864e49">getInstance</a>() {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">static</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> instance{};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a>(<span class="keyword">const</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a>(<span class="keyword">const</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;<a class="code" href="classCmdProcessor.html#ae60e7dd0da31debd8c92ac823f96e81e">operator=</a>(<span class="keyword">const</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a>(<span class="keyword">const</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;<a class="code" href="classCmdProcessor.html#ae60e7dd0da31debd8c92ac823f96e81e">operator=</a>(<span class="keyword">const</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;<a class="code" href="classCmdProcessor.html#ae60e7dd0da31debd8c92ac823f96e81e">operator=</a>(<span class="keyword">const</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCmdProcessor.html#a4c42f878a14077fcd04d2a3d6cd0c782">set_block_size</a>(std::size_t block_size);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;<a class="code" href="classCmdProcessor.html#ae60e7dd0da31debd8c92ac823f96e81e">operator=</a>(<span class="keyword">const</span> <a class="code" href="classCmdProcessor.html">CmdProcessor</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> *<a class="code" href="classCmdProcessor.html#afe39e4de9ff94201bf7ff86204450e1b">create</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCmdProcessor.html#ad53aff2471247cf001908b47457e5055">process</a>(<span class="keywordtype">void</span> *handle, <span class="keyword">const</span> std::string &amp;new_data);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCmdProcessor.html#aa52806574e380e1e54f8e4c5dbdd57e3">destroy</a>(<span class="keywordtype">void</span> *handle);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">struct </span>Context {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::string remaining_data;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::size_t print_log_id;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::size_t print_file_id;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    };</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ~<a class="code" href="classCmdProcessor.html">CmdProcessor</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::mutex             m_mutex{};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="structThreadPool.html">ThreadPool</a>             m_thread_pool{std::thread::hardware_concurrency() ? std::thread::hardware_concurrency() : 1};</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::vector&lt;Context *&gt; m_handlers{};</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="structCommandHandler.html">CommandHandler</a>         m_command_handler;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCmdProcessor.html#a4c42f878a14077fcd04d2a3d6cd0c782">set_block_size</a>(std::size_t block_size);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classCmdProcessor.html#a6d806c15dc2c85d7b4a5a9c667ddd048">context_t</a> <a class="code" href="classCmdProcessor.html#ac608a94542902d25a05644bcb19cd931">create</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCmdProcessor.html#ad53aff2471247cf001908b47457e5055">process</a>(<span class="keywordtype">void</span> *handle, <span class="keyword">const</span> std::string &amp;new_data);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classCmdProcessor.html#aa52806574e380e1e54f8e4c5dbdd57e3">destroy</a>(<span class="keywordtype">void</span> *handle);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">struct </span>Context {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::string remaining_data{};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classCmdProcessor.html">CmdProcessor</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ~<a class="code" href="classCmdProcessor.html">CmdProcessor</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::mutex m_mutex{};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="structThreadPool.html">ThreadPool</a> m_thread_pool{std::thread::hardware_concurrency() ? std::thread::hardware_concurrency() : 1};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::vector&lt;std::unique_ptr&lt;Context&gt;&gt; m_handles{};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="structCommandHandler.html">CommandHandler</a> m_command_handler{1};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::size_t m_print_log_id{};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::size_t m_print_file_id{};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
 <div class="ttc" id="ThreadPool_8h_html"><div class="ttname"><a href="ThreadPool_8h.html">ThreadPool.h</a></div></div>
-<div class="ttc" id="classCmdProcessor_html_ad53aff2471247cf001908b47457e5055"><div class="ttname"><a href="classCmdProcessor.html#ad53aff2471247cf001908b47457e5055">CmdProcessor::process</a></div><div class="ttdeci">void process(void *handle, const std::string &amp;new_data)</div><div class="ttdef"><b>Definition:</b> CommandProcessor.cpp:38</div></div>
+<div class="ttc" id="classCmdProcessor_html_ad53aff2471247cf001908b47457e5055"><div class="ttname"><a href="classCmdProcessor.html#ad53aff2471247cf001908b47457e5055">CmdProcessor::process</a></div><div class="ttdeci">void process(void *handle, const std::string &amp;new_data)</div><div class="ttdef"><b>Definition:</b> CommandProcessor.cpp:41</div></div>
 <div class="ttc" id="structThreadPool_html"><div class="ttname"><a href="structThreadPool.html">ThreadPool</a></div><div class="ttdoc">Класс пула потоков. </div><div class="ttdef"><b>Definition:</b> ThreadPool.h:9</div></div>
 <div class="ttc" id="classCmdProcessor_html"><div class="ttname"><a href="classCmdProcessor.html">CmdProcessor</a></div><div class="ttdef"><b>Definition:</b> CommandProcessor.h:6</div></div>
-<div class="ttc" id="classCmdProcessor_html_afe39e4de9ff94201bf7ff86204450e1b"><div class="ttname"><a href="classCmdProcessor.html#afe39e4de9ff94201bf7ff86204450e1b">CmdProcessor::create</a></div><div class="ttdeci">void * create()</div><div class="ttdef"><b>Definition:</b> CommandProcessor.cpp:20</div></div>
 <div class="ttc" id="classCmdProcessor_html_a4c42f878a14077fcd04d2a3d6cd0c782"><div class="ttname"><a href="classCmdProcessor.html#a4c42f878a14077fcd04d2a3d6cd0c782">CmdProcessor::set_block_size</a></div><div class="ttdeci">void set_block_size(std::size_t block_size)</div><div class="ttdef"><b>Definition:</b> CommandProcessor.cpp:16</div></div>
 <div class="ttc" id="structCommandHandler_html"><div class="ttname"><a href="structCommandHandler.html">CommandHandler</a></div><div class="ttdef"><b>Definition:</b> CommandHandler.h:7</div></div>
 <div class="ttc" id="classCmdProcessor_html_ae60e7dd0da31debd8c92ac823f96e81e"><div class="ttname"><a href="classCmdProcessor.html#ae60e7dd0da31debd8c92ac823f96e81e">CmdProcessor::operator=</a></div><div class="ttdeci">CmdProcessor &amp; operator=(const CmdProcessor &amp;)=delete</div></div>
-<div class="ttc" id="classCmdProcessor_html_acf3d1b69efdde705ad903f6b65864e49"><div class="ttname"><a href="classCmdProcessor.html#acf3d1b69efdde705ad903f6b65864e49">CmdProcessor::getInstance</a></div><div class="ttdeci">static CmdProcessor &amp; getInstance()</div><div class="ttdoc">Выдает ссылку на единожды созданный объект класса CmdProcessor. </div><div class="ttdef"><b>Definition:</b> CommandProcessor.h:10</div></div>
+<div class="ttc" id="classCmdProcessor_html_a6d806c15dc2c85d7b4a5a9c667ddd048"><div class="ttname"><a href="classCmdProcessor.html#a6d806c15dc2c85d7b4a5a9c667ddd048">CmdProcessor::context_t</a></div><div class="ttdeci">void * context_t</div><div class="ttdef"><b>Definition:</b> CommandProcessor.h:9</div></div>
+<div class="ttc" id="classCmdProcessor_html_acf3d1b69efdde705ad903f6b65864e49"><div class="ttname"><a href="classCmdProcessor.html#acf3d1b69efdde705ad903f6b65864e49">CmdProcessor::getInstance</a></div><div class="ttdeci">static CmdProcessor &amp; getInstance()</div><div class="ttdoc">Выдает ссылку на единожды созданный объект класса CmdProcessor. </div><div class="ttdef"><b>Definition:</b> CommandProcessor.h:12</div></div>
 <div class="ttc" id="CommandHandler_8h_html"><div class="ttname"><a href="CommandHandler_8h.html">CommandHandler.h</a></div></div>
-<div class="ttc" id="classCmdProcessor_html_aa52806574e380e1e54f8e4c5dbdd57e3"><div class="ttname"><a href="classCmdProcessor.html#aa52806574e380e1e54f8e4c5dbdd57e3">CmdProcessor::destroy</a></div><div class="ttdeci">void destroy(void *handle)</div><div class="ttdef"><b>Definition:</b> CommandProcessor.cpp:59</div></div>
+<div class="ttc" id="classCmdProcessor_html_aa52806574e380e1e54f8e4c5dbdd57e3"><div class="ttname"><a href="classCmdProcessor.html#aa52806574e380e1e54f8e4c5dbdd57e3">CmdProcessor::destroy</a></div><div class="ttdeci">void destroy(void *handle)</div><div class="ttdef"><b>Definition:</b> CommandProcessor.cpp:61</div></div>
+<div class="ttc" id="classCmdProcessor_html_ac608a94542902d25a05644bcb19cd931"><div class="ttname"><a href="classCmdProcessor.html#ac608a94542902d25a05644bcb19cd931">CmdProcessor::create</a></div><div class="ttdeci">context_t create()</div><div class="ttdef"><b>Definition:</b> CommandProcessor.cpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

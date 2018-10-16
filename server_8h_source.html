@@ -119,7 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    uint16_t              m_port;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ba::io_service        m_service;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ba::ip::tcp::acceptor m_acceptor;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::list&lt;client_t&gt;   clients{};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::list&lt;client_t&gt;   m_clients{};</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
 <div class="ttc" id="structClient_html"><div class="ttname"><a href="structClient.html">Client</a></div><div class="ttdoc">Класс ассинхронной работы с клиентом. </div><div class="ttdef"><b>Definition:</b> client.h:11</div></div>
 <div class="ttc" id="structServer_html_a1f559ed476e926361458dae8f9f53245"><div class="ttname"><a href="structServer.html#a1f559ed476e926361458dae8f9f53245">Server::remove_client</a></div><div class="ttdeci">void remove_client(const client_t &amp;client)</div><div class="ttdef"><b>Definition:</b> server.cpp:26</div></div>
