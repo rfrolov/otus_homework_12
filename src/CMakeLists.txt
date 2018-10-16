@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.6)
 
 project(bulk_server VERSION 1.0.$ENV{TRAVIS_BUILD_NUMBER})
 
-
+find_package(Threads REQUIRED)
+find_package(Boost REQUIRED)
 find_package(Boost COMPONENTS system REQUIRED)
 
 file(GLOB_RECURSE SOURCES *.cpp *.h)

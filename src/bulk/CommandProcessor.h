@@ -6,6 +6,8 @@
 class CmdProcessor {
 public:
 
+    using context_t = void*;
+
     /// Выдает ссылку на единожды созданный объект класса CmdProcessor.
     static CmdProcessor &getInstance() {
         static CmdProcessor instance{};
@@ -24,10 +26,9 @@ public:
 
     /**
      * Создает командный обработчик.
-     * @param bulk Размер печатаемого блока.
-     * @return Указатель на контекст обработчика.
+     * @return Контекст обработчика.
      */
-    void *create();
+    context_t create();
 
     /**
      * Обрабатывает данные конкретного обработчика.
@@ -44,17 +45,17 @@ public:
 
 private:
     struct Context {
-        std::string remaining_data;
-        std::size_t print_log_id;
-        std::size_t print_file_id;
+        std::string remaining_data{};
     };
 
     CmdProcessor() = default;
 
     ~CmdProcessor();
 
-    std::mutex             m_mutex{};
-    ThreadPool             m_thread_pool{std::thread::hardware_concurrency() ? std::thread::hardware_concurrency() : 1};
-    std::vector<Context *> m_handlers{};
-    CommandHandler         m_command_handler;
+    std::mutex m_mutex{};
+    ThreadPool m_thread_pool{std::thread::hardware_concurrency() ? std::thread::hardware_concurrency() : 1};
+    std::vector<std::unique_ptr<Context>> m_handles{};
+    CommandHandler m_command_handler{1};
+    std::size_t m_print_log_id{};
+    std::size_t m_print_file_id{};
 };

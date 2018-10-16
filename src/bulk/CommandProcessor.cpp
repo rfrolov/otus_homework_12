@@ -17,30 +17,32 @@ void CmdProcessor::set_block_size(std::size_t block_size) {
     m_command_handler.set_block_size(block_size);
 }
 
-void *CmdProcessor::create() {
+CmdProcessor::context_t CmdProcessor::create() {
     std::unique_lock<std::mutex> lock(m_mutex);
-    m_handlers.emplace_back(new Context{std::string{}});
+    m_handles.emplace_back(std::make_unique<Context>());
 
-    auto *handle = m_handlers.back();
-    handle->print_log_id = m_command_handler.add_printer(
-            [this](std::time_t, CommandHandler::command_pull_t command_pull) {
-                m_thread_pool.enqueue([command_pull] { return print_log(command_pull); });
-            });
+    if (m_print_log_id == 0) {
+        m_print_log_id = m_command_handler.add_printer(
+                [this](std::time_t, CommandHandler::command_pull_t command_pull) {
+                    m_thread_pool.enqueue([command_pull] { return print_log(command_pull); });
+                });
+    }
 
-    handle->print_file_id = m_command_handler.add_printer(
-            [this](std::time_t time, CommandHandler::command_pull_t command_pull) {
-                static size_t rnd{};
-                m_thread_pool.enqueue([time, command_pull] { return print_file(time, rnd++, command_pull); });
-            });
-    return handle;
+    if (m_print_file_id == 0) {
+        m_print_file_id = m_command_handler.add_printer(
+                [this](std::time_t time, CommandHandler::command_pull_t command_pull) {
+                    static size_t rnd{};
+                    m_thread_pool.enqueue([time, command_pull] { return print_file(time, rnd++, command_pull); });
+                });
+    }
+    return m_handles.back().get();
 }
 
 void CmdProcessor::process(void *handle, const std::string &new_data) {
     std::unique_lock<std::mutex> lock(m_mutex);
 
-    auto it = std::find(m_handlers.cbegin(), m_handlers.cend(), handle);
-    if (it == m_handlers.cend()) { return; }
-
+    auto it = std::find_if(m_handles.cbegin(), m_handles.cend(), [&handle](auto &it) { return it.get() == handle; });
+    if (it == m_handles.cend()) { return; }
     auto &context = *it;
 
     std::string data = context->remaining_data + new_data;
@@ -59,28 +61,28 @@ void CmdProcessor::process(void *handle, const std::string &new_data) {
 void CmdProcessor::destroy(void *handle) {
     std::unique_lock<std::mutex> lock(m_mutex);
 
-    auto it = std::find(m_handlers.cbegin(), m_handlers.cend(), handle);
-    if (it == m_handlers.cend()) { return; }
-
+    auto it = std::find_if(m_handles.cbegin(), m_handles.cend(), [&handle](auto &it) { return it.get() == handle; });
+    if (it == m_handles.cend()) { return; }
     auto &context = *it;
 
-    auto cmd_statistic = m_command_handler.finish();
-    m_command_handler.del_printer(context->print_log_id);
-    m_command_handler.del_printer(context->print_file_id);
+    if (m_handles.empty()) {
+        m_command_handler.del_printer(m_print_log_id);
+        m_print_log_id = 0;
 
-#ifndef NDEBUG
-    std::cout << "handle (" << context << "): " << cmd_statistic << std::endl;
-#endif //#ifndef NDEBUG
+        m_command_handler.del_printer(m_print_file_id);
+        m_print_file_id = 0;
+    }
 
-    delete *it;
-    m_handlers.erase(it);
+    m_handles.erase(it);
 }
 
-
 CmdProcessor::~CmdProcessor() {
+    auto cmd_statistic = m_command_handler.finish();
     auto pool_statistic = m_thread_pool.finish();
 
 #ifndef NDEBUG
+    std::cout << cmd_statistic << std::endl;
+
     for (const auto &statistic: pool_statistic) {
         std::cout << "поток(" << (&statistic - &pool_statistic[0] + 1) << "), " << statistic << std::endl;
     }

@@ -42,5 +42,5 @@ private:
     uint16_t              m_port;
     ba::io_service        m_service;
     ba::ip::tcp::acceptor m_acceptor;
-    std::list<client_t>   clients{};
+    std::list<client_t>   m_clients{};
 };

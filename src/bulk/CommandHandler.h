@@ -28,13 +28,18 @@ struct CommandHandler {
         }
     };
 
+    CommandHandler() = delete;
+
     /**
      * Конструктор.
      * @param block_size Размер блока.
      */
-    explicit CommandHandler(std::size_t block_size = 1);
+    explicit CommandHandler(std::size_t block_size);
 
-    /// Устанавливает размер блока.
+    /**
+     * Устанавливает размер блока.
+     * @param block_size Размер блока.
+     */
     void set_block_size(size_t block_size);
 
     /**

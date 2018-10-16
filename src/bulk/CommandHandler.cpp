@@ -12,12 +12,12 @@ void CommandHandler::set_block_size(size_t block_size) {
 
 size_t CommandHandler::add_printer(const fn_printer_t &printer) {
     m_printers.emplace_back(printer);
-    return m_printers.size() - 1;
+    return m_printers.size();
 }
 
 void CommandHandler::del_printer(size_t printer_id) {
-    if (printer_id < m_printers.size()) {
-        m_printers.erase(std::next(m_printers.begin(), printer_id));
+    if (printer_id && printer_id - 1 < m_printers.size()) {
+        m_printers.erase(std::next(m_printers.begin(), printer_id - 1));
     }
 }
 
