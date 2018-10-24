@@ -101,31 +101,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structClient.html#af89b8c6eff32bb189f9f5b7f27c72189">operator=</a>(<span class="keyword">const</span> <a class="code" href="structClient.html">Client</a> &amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structClient.html#a3d2cabd89d497461bb4604a5014ee75d">Client</a>(<a class="code" href="structServer.html">Server</a> &amp;server, ba::io_service &amp;service);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="structClient.html#a3d2cabd89d497461bb4604a5014ee75d">Client</a>(ba::ip::tcp::socket socket);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ba::ip::tcp::socket &amp;<a class="code" href="structClient.html#afac2d218036232bfe9423ac35330e63b">socket</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structClient.html#a742373e08a80d993d2651b6fff76f5b9">start</a>();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structClient.html#a742373e08a80d993d2651b6fff76f5b9">start</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structClient.html#a9e827b82efa67d7e334dcdde36d7ea87">stop</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structClient.html#a9e827b82efa67d7e334dcdde36d7ea87">stop</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> on_read(<span class="keyword">const</span> boost::system::error_code &amp;err, <span class="keywordtype">size_t</span> data_size);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> on_read(<span class="keyword">const</span> boost::system::error_code &amp;err, <span class="keywordtype">size_t</span> data_size);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ba::ip::tcp::socket m_socket;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> m_read_buffer_size{10};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">char</span> m_read_buffer[m_read_buffer_size];</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> m_started;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> *m_handle;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="structServer.html">Server</a> &amp;m_server;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="ttc" id="structClient_html_a742373e08a80d993d2651b6fff76f5b9"><div class="ttname"><a href="structClient.html#a742373e08a80d993d2651b6fff76f5b9">Client::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Ничинает работу по обработке данных от клиента. </div><div class="ttdef"><b>Definition:</b> client.cpp:12</div></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span>     m_read_buffer_size{10};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">char</span>                    m_read_buffer[m_read_buffer_size];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span>                    m_started;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span>                    *m_handle{};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ba::ip::tcp::socket     m_socket;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::shared_ptr&lt;Client&gt; m_self;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="ttc" id="structClient_html_a742373e08a80d993d2651b6fff76f5b9"><div class="ttname"><a href="structClient.html#a742373e08a80d993d2651b6fff76f5b9">Client::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Ничинает работу по обработке данных от клиента. </div><div class="ttdef"><b>Definition:</b> client.cpp:10</div></div>
 <div class="ttc" id="structClient_html"><div class="ttname"><a href="structClient.html">Client</a></div><div class="ttdoc">Класс ассинхронной работы с клиентом. </div><div class="ttdef"><b>Definition:</b> client.h:11</div></div>
-<div class="ttc" id="structClient_html_afac2d218036232bfe9423ac35330e63b"><div class="ttname"><a href="structClient.html#afac2d218036232bfe9423ac35330e63b">Client::socket</a></div><div class="ttdeci">ba::ip::tcp::socket &amp; socket()</div><div class="ttdoc">Возвращает ссылку на сокет. </div><div class="ttdef"><b>Definition:</b> client.cpp:5</div></div>
 <div class="ttc" id="structClient_html_af89b8c6eff32bb189f9f5b7f27c72189"><div class="ttname"><a href="structClient.html#af89b8c6eff32bb189f9f5b7f27c72189">Client::operator=</a></div><div class="ttdeci">void operator=(const Client &amp;)=delete</div></div>
-<div class="ttc" id="structClient_html_a9e827b82efa67d7e334dcdde36d7ea87"><div class="ttname"><a href="structClient.html#a9e827b82efa67d7e334dcdde36d7ea87">Client::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Заканчивает работу с клиентом. </div><div class="ttdef"><b>Definition:</b> client.cpp:20</div></div>
+<div class="ttc" id="structClient_html_a9e827b82efa67d7e334dcdde36d7ea87"><div class="ttname"><a href="structClient.html#a9e827b82efa67d7e334dcdde36d7ea87">Client::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Заканчивает работу с клиентом. </div><div class="ttdef"><b>Definition:</b> client.cpp:19</div></div>
 <div class="ttc" id="structClient_html_a3d2cabd89d497461bb4604a5014ee75d"><div class="ttname"><a href="structClient.html#a3d2cabd89d497461bb4604a5014ee75d">Client::Client</a></div><div class="ttdeci">Client(const Client &amp;)=delete</div></div>
 <div class="ttc" id="structServer_html"><div class="ttname"><a href="structServer.html">Server</a></div><div class="ttdoc">Класс сервера. </div><div class="ttdef"><b>Definition:</b> server.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->

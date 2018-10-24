@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['print',['print',['../print_8cpp.html#afb7156212660cca7fb9cf1e8ddc8d2a4',1,'print.cpp']]],
-  ['print_2ecpp',['print.cpp',['../print_8cpp.html',1,'']]],
-  ['print_2eh',['print.h',['../print_8h.html',1,'']]],
-  ['print_5ffile',['print_file',['../print_8cpp.html#a28de04a3baf545b9a8b927220b482924',1,'print_file(std::time_t time, size_t rnd, const std::vector&lt; std::string &gt; &amp;command_pool):&#160;print.cpp'],['../print_8h.html#a28de04a3baf545b9a8b927220b482924',1,'print_file(std::time_t time, size_t rnd, const std::vector&lt; std::string &gt; &amp;command_pool):&#160;print.cpp']]],
-  ['print_5flog',['print_log',['../print_8cpp.html#a78d319b0d85d674e3e1756bb23d24c75',1,'print_log(const std::vector&lt; std::string &gt; &amp;command_pool, std::ostream &amp;os):&#160;print.cpp'],['../print_8h.html#a67294f9a6de539ea08f1c41933684add',1,'print_log(const std::vector&lt; std::string &gt; &amp;command_pool, std::ostream &amp;os=std::cout):&#160;print.cpp']]],
-  ['process',['process',['../classCmdProcessor.html#ad53aff2471247cf001908b47457e5055',1,'CmdProcessor']]]
+  ['operator_2b_3d',['operator+=',['../structCommandHandler_1_1Statistic.html#a8f7f6c00077d653920da79f6a042d44b',1,'CommandHandler::Statistic::operator+=()'],['../structThreadPool_1_1Statistic.html#aabba4e3e5c8ed730a52af8d004bc1af0',1,'ThreadPool::Statistic::operator+=()']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../CommandProcessor_8cpp.html#afcdb1fb96944c9e7efe1af1423191e7d',1,'operator&lt;&lt;(std::ostream &amp;os, const CommandHandler::Statistic &amp;statistic):&#160;CommandProcessor.cpp'],['../CommandProcessor_8cpp.html#a16cac29c3ef16c022befe14f962559f5',1,'operator&lt;&lt;(std::ostream &amp;os, const ThreadPool::Statistic &amp;statistic):&#160;CommandProcessor.cpp']]],
+  ['operator_3d',['operator=',['../classCmdProcessor.html#ae60e7dd0da31debd8c92ac823f96e81e',1,'CmdProcessor::operator=(const CmdProcessor &amp;)=delete'],['../classCmdProcessor.html#a1ea15bb59b4962b7e22a70747d6fd937',1,'CmdProcessor::operator=(const CmdProcessor &amp;&amp;)=delete'],['../structClient.html#af89b8c6eff32bb189f9f5b7f27c72189',1,'Client::operator=()'],['../structServer.html#a94a3806d56e33c490edd381f2bbde812',1,'Server::operator=()']]],
+  ['operator_3d_3d',['operator==',['../structCommandHandler_1_1Statistic.html#abdf187984a2e1b437c2368de2b5a9f2f',1,'CommandHandler::Statistic::operator==()'],['../structThreadPool_1_1Statistic.html#a17e397ada65d8f6b56b6426d6dd7f128',1,'ThreadPool::Statistic::operator==()']]]
 ];
