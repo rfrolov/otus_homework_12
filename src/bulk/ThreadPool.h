@@ -10,8 +10,9 @@ struct ThreadPool {
 
     /// Структура статистики.
     struct Statistic {
-        size_t bulk_num;        ///< Количество блоков.
-        size_t command_num;     ///< Количество команд.
+        std::thread::id id;              ///< Идентификатор потока.
+        size_t          bulk_num;        ///< Количество блоков.
+        size_t          command_num;     ///< Количество команд.
 
         Statistic &operator+=(const Statistic &other) {
             bulk_num += other.bulk_num;
@@ -30,11 +31,13 @@ struct ThreadPool {
      * Конструктор.
      * @param threads_num Количество потоков в пуле.
      */
-    explicit ThreadPool(size_t threads_num) : m_max_queue_size{threads_num * 3} {
+    explicit ThreadPool(size_t threads_num) :
+            m_max_queue_size{threads_num * 3} {
         m_statistics.resize(threads_num);
         m_workers.reserve(threads_num);
 
-        for (size_t i = 0; i < threads_num; ++i)
+        for (size_t i = 0; i < threads_num; ++i) {
+
             m_workers.emplace_back(
                     [this, i] {
                         for (;;) {
@@ -56,6 +59,9 @@ struct ThreadPool {
                         }
                     }
             );
+
+            m_statistics[i].id = m_workers[i].get_id();
+        }
     }
 
     /// Добавляет задачу в очередь.

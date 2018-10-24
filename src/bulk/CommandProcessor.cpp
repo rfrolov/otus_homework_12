@@ -32,7 +32,9 @@ CmdProcessor::context_t CmdProcessor::create() {
         m_print_file_id = m_command_handler.add_printer(
                 [this](std::time_t time, CommandHandler::command_pull_t command_pull) {
                     static size_t rnd{};
-                    m_thread_pool.enqueue([time, command_pull] { return print_file(time, rnd++, command_pull); });
+                    m_thread_pool.enqueue([time, command_pull] {
+                        return print_file(time, rnd++, command_pull);
+                    });
                 });
     }
     return m_handles.back().get();
@@ -45,10 +47,10 @@ void CmdProcessor::process(void *handle, const std::string &new_data) {
     if (it == m_handles.cend()) { return; }
     auto &context = *it;
 
-    std::string data = context->remaining_data + new_data;
+    std::string data      = context->remaining_data + new_data;
     std::size_t data_size = data.length();
 
-    std::size_t last_index{};
+    std::size_t      last_index{};
     for (std::size_t index{0}; index < data_size; ++index) {
         if (data[index] == '\n') {
             m_command_handler.add_command(std::string(&data[last_index], &data[index]));
@@ -77,14 +79,14 @@ void CmdProcessor::destroy(void *handle) {
 }
 
 CmdProcessor::~CmdProcessor() {
-    auto cmd_statistic = m_command_handler.finish();
+    auto cmd_statistic  = m_command_handler.finish();
     auto pool_statistic = m_thread_pool.finish();
 
 #ifndef NDEBUG
     std::cout << cmd_statistic << std::endl;
 
     for (const auto &statistic: pool_statistic) {
-        std::cout << "поток(" << (&statistic - &pool_statistic[0] + 1) << "), " << statistic << std::endl;
+        std::cout << "поток(" << statistic.id << "), " << statistic << std::endl;
     }
 #endif //#ifndef NDEBUG
 }

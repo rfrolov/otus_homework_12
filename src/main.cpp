@@ -3,12 +3,6 @@
 
 #include <csignal>
 
-std::unique_ptr<Server> app{nullptr};
-
-void signal_handler(int) {
-    app->stop();
-}
-
 int main(int argc, char *argv[]) {
     uint16_t port{0};
     size_t   block_size{0};
@@ -19,14 +13,11 @@ int main(int argc, char *argv[]) {
     }
 
     if (port == 0 || block_size == 0) {
-        std::cout << "Wrong argument." << std::endl;
+        std::cout << "Wrong argument num.\nuse: join_server <port> <block_size>" << std::endl;
         return 1;
     }
 
-    std::signal(SIGINT, signal_handler);
-    std::signal(SIGTERM, signal_handler);
-
-    app = std::make_unique<Server>(port, block_size);
-    app->run();
+    Server app{port, block_size};
+    app.run();
     return 0;
 }

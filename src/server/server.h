@@ -11,8 +11,6 @@ struct Client;
 
 /// Класс сервера.
 struct Server {
-    using client_t = std::shared_ptr<Client>;
-
     Server(const Server &) = delete;
 
     void operator=(const Server &) = delete;
@@ -27,20 +25,12 @@ struct Server {
     /// Запускает сервер.
     void run();
 
-    /// Остановить работу сервера.
-    void stop();
-
-    /**
-     * Удаляет клиента.
-     * @param client Адрес клиента.
-     */
-    void remove_client(const client_t &client);
-
 private:
-    void handle_accept(const client_t &client, const boost::system::error_code &err);
+    void do_accept();
+    void do_stop();
 
     uint16_t              m_port;
     ba::io_service        m_service;
     ba::ip::tcp::acceptor m_acceptor;
-    std::list<client_t>   m_clients{};
+    ba::ip::tcp::socket   m_socket;
 };

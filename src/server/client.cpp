@@ -2,15 +2,14 @@
 #include "server.h"
 #include "bulk/CommandProcessor.h"
 
-ba::ip::tcp::socket &Client::socket() { return m_socket; }
-
-Client::Client(Server &server, ba::io_service &service) : m_server{server}
-                                                          , m_socket{service}
-                                                          , m_started{false} {
+Client::Client(ba::ip::tcp::socket socket) :
+        m_socket{std::move(socket)}
+        , m_started{false} {
 }
 
 void Client::start() {
-    m_handle = CmdProcessor::getInstance().create();
+    m_self    = shared_from_this();
+    m_handle  = CmdProcessor::getInstance().create();
     m_started = true;
     m_socket.async_read_some(ba::buffer(m_read_buffer), [this](const boost::system::error_code &err, size_t bytes) {
         on_read(err, bytes);
@@ -22,7 +21,7 @@ void Client::stop() {
     CmdProcessor::getInstance().destroy(m_handle);
     m_started = false;
     m_socket.close();
-    m_server.remove_client(shared_from_this());
+    m_self.reset();
 }
 
 void Client::on_read(const boost::system::error_code &err, size_t data_size) {
